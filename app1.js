@@ -32,7 +32,7 @@ if (typeof document !== 'undefined') {
 
 process.env.PWD = process.cwd();
 app1.use(express.static(path.join(process.env.PWD, 'public')));
-app1.use(express.static('./public')));
+app1.use(express.static('./public'));
 app1.use(express.static(path.join(__dirname, 'public')));
 app1.use(bodyParser.urlencoded({extend:true}));
 app1.engine('html', require('ejs').renderFile);
