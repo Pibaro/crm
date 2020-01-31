@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+  res.end('http server working\n');
 });
 server.listen(PORT, () => {
   console.log(`Server running on ${PORT}/`);
@@ -37,12 +37,14 @@ app1.engine('html', require('ejs').renderFile);
 app1.set('view engine', 'html');
 app1.set('views', __dirname);
 
+process.env.PWD = process.cwd();
+app.use(express.static(path.join(process.env.PWD, 'public')));
 if (process.env.NODE_ENV === 'production') {
 	app1.use(express.static('client/build'));
 }
 
 app1.get('/', (req, res)=>{
-  res.sendFile(path.join(__dirname + '/index.html'));
+  res.sendFile(path.join(__dirname + 'index.html'));
 })
 
 app1.get("/data", (req, res)=>{
