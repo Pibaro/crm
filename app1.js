@@ -8,11 +8,17 @@ const bodyParser = require('body-parser');
 const app1 = express();
 app1.use(bodyParser.json());
 const path = require('path');
+const PORT = process.env.PORT || 5000;
 
-http.createServer(function(request, response){
-  response.whiteHead(200, {"Content-Type": "text/plain"})
-  response.end("crm")
-}).listen(process.env.PORT)
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World\n');
+});
+server.listen(PORT, () => {
+  console.log(`Server running on ${PORT}/`);
+});
+
 
 let data = [];
 
