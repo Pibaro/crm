@@ -1,0 +1,26 @@
+{
+  "name": "mongo",
+  "version": "1.0.0",
+  "description": "Mongo",
+  "main": "app1.js",
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "googleapis": "^39.2.0",
+    "jquery": "^3.4.1",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.5.0",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7",
+    "uniq": "^1.0.1",
+    "vanilla.js": "^0.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app1",
+    "dev": "nodemon app1"
+  },
+  "author": "",
+  "license": "ISC"
+}

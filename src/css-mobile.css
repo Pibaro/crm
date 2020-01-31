@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  max-width: inherit;
+  font-family: 'Poppins', sans-serif;
+  background-color: #2B255C;
+  display: flex;
+}
+
+header {
+  margin: auto;
+  display: flex;
+  position: fixed;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  justify-content: space-between;
+  height: 100px;
+  z-index: 10;
+  -webkit-box-shadow: -6px 13px 57px -17px rgba(255,255,255,1);
+  -moz-box-shadow: -6px 13px 57px -17px rgba(255,255,255,1);
+  box-shadow: -6px 13px 57px -17px rgba(255,255,255,1);
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: 80%;
+  margin: auto;
+}
+
+input {
+  border-radius: 20px;
+  width: 50%;
+}
+
+.menuIcons {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 5%;
+}
+
+i.fas {
+  height: 20px;
+  font-size: 20px;
+}
+
+.homeDashboard {
+  display: flex;
+  justify-content: space-between;
+  width: 27%;
+  margin: 15% 0 5% 3%;
+  color: white;
+}
+
+.bodyElements {
+  display: flex;
+  width: auto;
+  margin: auto;
+}
+
+#bodyMain {
+  margin-top: 0%;
+}
+
+#sideMenu {
+  background-color: white;
+  width: 0;
+  overflow-x: hidden;
+}
+
+.asideLinks {
+  margin-top: 30%;
+  margin-left: 20%;
+}
+
+#sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#sidebar a:hover {
+  color: #f1f1f1;
+}
+
+#sidebar .closebtn {
+  position: relative;
+  top: 0;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin: 50% 0 10% 100%;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin-left: 99%;
+}
+
+#sidebar a:hover {
+  color: red;
+}
+
+/* #sidebar.active{
+ left:0px;
+} */
+
+#sidebar ul li{
+ color: #2B2553;
+ list-style: none;
+ padding: 15px 10px;
+ border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  z-index: -1;
+}
+
+.overview1 {
+  background-color: #A0D6EE;
+  color: white;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.overview2 {
+  background-color: #76CC65;
+  color: white;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.overview3 {
+  background-color: #A382D4;
+  color: white;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.overview4 {
+  background-color: #DD5454;
+  color: white;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.overviewItemOne {
+  text-align: left;
+  margin: 5% 0 0 10%;
+}
+
+.chartsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  margin-top: 10%;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+  align-items: center;
+}
+
+.firstBarChart {
+  width: 49%;
+  height: 30%;
+  background-color: #2B2553;
+  border-radius: 10px;
+}
+
+.firstPieChart {
+  width: 49%;
+  height: 300px;
+  background-color: #2B2553;
+  border-radius: 10px;
+}
+
+.firstLineChart {
+  width: 49%;
+  position: relative;
+  height: 300px;
+  background-color: #2B2553;
+  margin-top: 3%;
+  border-radius: 10px;
+}
+
+.secondLineChart {
+  width: 49%;
+  position: relative;
+  height: 300px;
+  background-color: #2B2553;
+  margin-top: 3%;
+  border-radius: 10px;
+}
+
+#chart1 {
+  padding: 20px;
+}
+
+#chart2 {
+  padding: 10px;
+}
+
+#users {
+  font-family: inherit;
+  font-size: 45px;
+}
+
+#purchases {
+  font-family: inherit;
+  font-size: 45px;
+}
+
+.tableSection {
+  width: 100%;
+}
+
+.tableTitle {
+}
+
+table {
+  color: black;
+  font-size: 13px;
+  padding: 2%;
+}
+
+table, th, td {
+  border: 1px dotted #2B2553;
+  border-collapse: collapse;
+  width: 10%;
+}
+
+th, td {
+  padding: 8px;
+}
+
+th {
+  text-align: left;
+}
+
+table#t01 {
+  width: 96%;
+  margin: auto;
+  background-color: #f1f1c1;
+}
+
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+  background-color: #fff;
+}
+table#t01 th {
+  color: white;
+  background-color: #2B2553;
+}
