@@ -38,7 +38,7 @@ app1.set('view engine', 'html');
 app1.set('views', __dirname);
 
 process.env.PWD = process.cwd();
-app.use(express.static(path.join(process.env.PWD, 'public')));
+app1.use(express.static(path.join(process.env.PWD, 'public')));
 if (process.env.NODE_ENV === 'production') {
 	app1.use(express.static('client/build'));
 }
