@@ -30,14 +30,15 @@ if (typeof document !== 'undefined') {
 }
 
 
-app1.use(express.static('src', { root: 'crm' }));
+process.env.PWD = process.cwd();
+app1.use(express.static(path.join(process.env.PWD, 'public')));
+app1.use(express.static('./public')));
+app1.use(express.static(path.join(__dirname, 'public')));
 app1.use(bodyParser.urlencoded({extend:true}));
 app1.engine('html', require('ejs').renderFile);
 app1.set('view engine', 'html');
 app1.set('views', __dirname);
 
-process.env.PWD = process.cwd();
-app1.use(express.static(path.join(process.env.PWD, 'public')));
 if (process.env.NODE_ENV === 'production') {
 	app1.use(express.static('client/build'));
 }
