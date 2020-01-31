@@ -28,7 +28,7 @@ app1.get('/', (req, res)=>{
   res.sendFile('index.html', { root: 'C:/Users/barak/Desktop/crm' });
 })
 
-app1.get("/data", (req, res)=>{
+app1.get("/crm/data", (req, res)=>{
   res.json(data);
 })
 // If modifying these scopes, delete token.json.
