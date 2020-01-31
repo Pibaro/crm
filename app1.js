@@ -2,7 +2,6 @@ const http = require('http');
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
-const vanillajs = require('vanilla.js');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app1 = express();
@@ -13,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('http server working\n');
+  res.end('http server working');
 });
 server.listen(PORT, () => {
   console.log(`Server running on ${PORT}/`);
@@ -44,7 +43,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app1.get('/', (req, res)=>{
-  res.sendFile(path.join(__dirname + 'index.html'));
+  res.sendFile(path.join(__dirname + '/index.html'));
 })
 
 app1.get("/data", (req, res)=>{
