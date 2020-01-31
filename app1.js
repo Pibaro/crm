@@ -30,14 +30,19 @@ if (typeof document !== 'undefined') {
   MyLibrary = require('my-library').default
 }
 
+
 app1.use(express.static('src', { root: 'C:/Users/barak/Desktop/crm' }));
 app1.use(bodyParser.urlencoded({extend:true}));
 app1.engine('html', require('ejs').renderFile);
 app1.set('view engine', 'html');
 app1.set('views', __dirname);
 
-app1.get('/', (req, res)=>{
-  res.sendFile('index.html', { root: 'C:/Users/barak/Desktop/crm' });
+if (process.env.NODE_ENV === 'production') {
+	app1.use(express.static('client/build'));
+}
+
+app1.get('*', (req, res)=>{
+  res.sendFile(path.join('index.html', { root: 'C:/Users/barak/Desktop/crm' }));
 })
 
 app1.get("/data", (req, res)=>{
